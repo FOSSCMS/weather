@@ -73,6 +73,9 @@
  * @ingroup templates
  */
 ?>
+
+
+
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
     <div class="navbar-header">
@@ -84,7 +87,7 @@
 
       <?php if (!empty($site_name)): ?>
         <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-      <?php endif; ?>
+      <?php endif;?>
 
       <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -114,11 +117,13 @@
   </div>
 </header>
 
-<?php if ($page['featured']): ?>
+ <?php if ($page['featured']): ?>
   <div class="featured">
     <?php print render($page['featured']); ?>
   </div> <!-- /.featured -->
 <?php endif; ?>
+
+
 
 <div class="main-container <?php print $container_class; ?>">
 
