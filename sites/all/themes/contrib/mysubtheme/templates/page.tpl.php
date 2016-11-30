@@ -73,9 +73,11 @@
  * @ingroup templates
  */
 ?>
+<div id="headId">
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
-    <div class="navbar-header">
+  <!--apply featured-->
+  	<div class="navbar-header">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
@@ -113,13 +115,17 @@
     <?php endif; ?>
   </div>
 </header>
+</div>
+<br/>
+
+  <?php if ($page['featured']): ?>
+  	<div class="featured">
+    	<?php print render($page['featured']); ?>
+  	</div> <!-- /.featured -->
+  <?php endif; ?>
 
 
-<?php if ($page['featured']): ?>
-  <div class="featured">
-    <?php print render($page['featured']); ?>
-  </div> <!-- /.featured -->
-<?php endif; ?>
+
 
 
 <?php if ($page['featured2']): ?>
