@@ -127,13 +127,6 @@
 
 
 
-
-<?php if ($page['featured2']): ?>
-  <div class="featured2">
-    <?php print render($page['featured2']); ?>
-  </div> <!-- /.featured -->
-<?php endif; ?>
-
 <div class="main-container <?php print $container_class; ?>">
 
   <header role="banner" id="page-header">

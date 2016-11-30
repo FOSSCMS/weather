@@ -10,10 +10,9 @@ base theme = bootstrap
 
 
 <<<<<<< HEAD:sites/all/themes/contrib/mysubtheme/mysubtheme.info
-regions[featured]		=  featured
+
 =======
 regions[featured] 		= 'featured'
-regions[featured2] 		= 'featured2'
 >>>>>>> 459a43bdf58e132070f3beffd2c0f3b075f7ce91:sites/all/themes/contrib/bootstrap_subtheme/bootstrap_subtheme.info
 regions[navigation]     = 'Navigation'
 regions[header]         = 'Top Bar'
