@@ -193,7 +193,12 @@
 <div id="footId">
   <?php if (!empty($page['footer'])): ?>
     <footer class="footer <?php print $container_class; ?>">
-      <?php print render($page['footer']); ?>
+      <div class="col-sm-offset-4 col-sm-4">
+       <center>
+       <?php print render($page['footer']); ?>
+      </center>
+      </div>
+
     </footer>
   <?php endif; ?>
 </div>
