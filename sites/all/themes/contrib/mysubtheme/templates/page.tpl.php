@@ -74,10 +74,18 @@
  */
 ?>
 <div id="headId">
-  <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+
+ <?php if ($page['featured']): ?>
+    <div class="featured" id="featured">
+      <?php print render($page['featured']); ?>      
+    </div> <!-- /.featured -->
+ <?php endif; ?>
+
+
+    <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
     <div class="<?php print $container_class; ?>">
     <!--apply featured-->
-    	<div class="navbar-header">
+      <div class="navbar-header">
         <?php if ($logo): ?>
           <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
             <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
@@ -115,16 +123,20 @@
       <?php endif; ?>
     </div>
   </header>
+
+
+
+  <?php /*if ($page['featured']): ?>
+    <div class="featured col-sm-2" id="featured">
+      <?php print render($page['featured']); ?>
+    </div> <!-- /.featured -->
+  <?php endif;*/ ?>
+ 
+  <!--<button type="button", id="btn1">Read the Story</button>-->
+
+
 </div>
 <br/>
-
-  <?php if ($page['featured']): ?>
-  	<div class="featured">
-    	<?php print render($page['featured']); ?>
-  	</div> <!-- /.featured -->
-  <?php endif; ?>
-
-
 
 
 <div class="main-container <?php print $container_class; ?>">
@@ -178,8 +190,10 @@
   </div>
 </div>
 
-<?php if (!empty($page['footer'])): ?>
-  <footer class="footer <?php print $container_class; ?>">
-    <?php print render($page['footer']); ?>
-  </footer>
-<?php endif; ?>
+<div id="footId">
+  <?php if (!empty($page['footer'])): ?>
+    <footer class="footer <?php print $container_class; ?>">
+      <?php print render($page['footer']); ?>
+    </footer>
+  <?php endif; ?>
+</div>
