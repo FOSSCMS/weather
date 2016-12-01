@@ -1,7 +1,23 @@
 /**
  * Place your custom styles here.
  */
-  #headId{
- 	background-image: url(http://www.cherrylogistics.com/wp-content/uploads/2015/03/weather_banner1.jpg);
- 	height : 450px;
+  
+ #featuredhead{
+
+ 	height:200px;
+ 	width:1500px;
+ }
+
+#navbar
+{
+	height:50px;
+	margin: -3cm 4cm 18cm 4cm;
+}
+
+
+  #footerId{
+	background-color: grey;
+	 
+
+
  }

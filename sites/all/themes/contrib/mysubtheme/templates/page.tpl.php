@@ -74,10 +74,18 @@
  */
 ?>
 <div id="headId">
+
+  <?php if ($page['featuredhead']): ?>
+    <div class="featuredhead" id="featuredhead" >
+      <?php print render($page['featuredhead']); ?>
+    </div> <!-- /.featured -->
+  <?php endif; ?>
+
+
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
   <!--apply featured-->
-  	<div class="navbar-header">
+  	<div class="navbar-header" id="navId">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
@@ -118,11 +126,15 @@
 </div>
 <br/>
 
+<div id="featired">
+  
   <?php if ($page['featured']): ?>
-  	<div class="featured">
+  	<div class="featured" >
     	<?php print render($page['featured']); ?>
   	</div> <!-- /.featured -->
   <?php endif; ?>
+
+  </div>
 
 
 
@@ -144,6 +156,8 @@
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
+
+   
 
     <section<?php print $content_column_class; ?>>
       <?php if (!empty($page['highlighted'])): ?>
@@ -168,18 +182,26 @@
       <?php endif; ?>
       <?php print render($page['content']); ?>
     </section>
-
+    
+    
     <?php if (!empty($page['sidebar_second'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
+    
 
   </div>
 </div>
 
+
+<!--footer -->
+
+
+<div id="footerId">
 <?php if (!empty($page['footer'])): ?>
   <footer class="footer <?php print $container_class; ?>">
     <?php print render($page['footer']); ?>
   </footer>
 <?php endif; ?>
+</div>
