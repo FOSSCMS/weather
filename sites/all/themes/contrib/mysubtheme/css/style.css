@@ -12,7 +12,14 @@
 {
 	height:50px;
 	margin: -3cm 4cm 18cm 4cm;
+
 }
+ #side
+ {
+
+ 	background-color: red;
+ }
+
 
 
   #footerId{
@@ -21,3 +28,4 @@
 
 
  }
+

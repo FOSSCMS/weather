@@ -13,6 +13,7 @@ base theme = bootstrap
 
 =======
 regions[featuredhead]   = 'featuredhead'
+regions[featuredhead2]  = 'featuredhead2'
 regions[featured] 		= 'featured'
 >>>>>>> 459a43bdf58e132070f3beffd2c0f3b075f7ce91:sites/all/themes/contrib/bootstrap_subtheme/bootstrap_subtheme.info
 regions[navigation]     = 'Navigation'

@@ -1,3 +1,4 @@
+
 <?php
 /**
  * @file
@@ -78,6 +79,13 @@
   <?php if ($page['featuredhead']): ?>
     <div class="featuredhead" id="featuredhead" >
       <?php print render($page['featuredhead']); ?>
+    </div> <!-- /.featured -->
+  <?php endif; ?>
+
+
+   <?php if ($page['featuredhead2']): ?>
+    <div class="featuredhead2" id="featuredhead2" >
+      <?php print render($page['featuredhead2']); ?>
     </div> <!-- /.featured -->
   <?php endif; ?>
 
@@ -163,6 +171,7 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
+      
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
@@ -183,12 +192,13 @@
       <?php print render($page['content']); ?>
     </section>
     
-    
+    <div id="side">
     <?php if (!empty($page['sidebar_second'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
+    </div>
     
 
   </div>
@@ -201,7 +211,10 @@
 <div id="footerId">
 <?php if (!empty($page['footer'])): ?>
   <footer class="footer <?php print $container_class; ?>">
-    <?php print render($page['footer']); ?>
+  <div class="col-sm-offset-4 col-sm-4">
+  <center><?php print render($page['footer']); ?></center>
+  </div>
+    
   </footer>
 <?php endif; ?>
 </div>
