@@ -125,7 +125,6 @@
   </header>
 
 
-
   <?php /*if ($page['featured']): ?>
     <div class="featured col-sm-2" id="featured">
       <?php print render($page['featured']); ?>
@@ -175,10 +174,13 @@
       <?php if (!empty($page['help'])): ?>
         <?php print render($page['help']); ?>
       <?php endif; ?>
+      
+
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
       <?php print render($page['content']); ?>
+
     </section>
 
     <?php if (!empty($page['sidebar_second'])): ?>
@@ -190,6 +192,9 @@
   </div>
 </div>
 
+  
+
+
 <div id="footId">
   <?php if (!empty($page['footer'])): ?>
     <footer class="footer <?php print $container_class; ?>">
@@ -198,7 +203,6 @@
        <?php print render($page['footer']); ?>
       </center>
       </div>
-
     </footer>
   <?php endif; ?>
 </div>
